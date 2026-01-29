@@ -1,0 +1,160 @@
+README — Projet Web “Cinéma NIYAS”
+
+Groupe : G10 — EMSI Les Orangers
+Réalisé par : Nidal Jabal • Mohamed Yassine Rouani • Asmaa Charqui
+Année : 2025
+
+1) Présentation du projet
+
+Cinéma NIYAS est une application web interactive dédiée à la découverte de films et de réalisateurs, avec un module de gestion locale (CRUD) et un tableau de bord KPI.
+L’objectif est de proposer une expérience “cinéma” moderne : suggestions aléatoires, recherche, favoris, gestion de films locaux, gestion de réalisateurs, et visualisation des statistiques via des graphiques.
+
+2) Fonctionnalités principales
+A. Navigation par sections (Single Page Application)
+
+Menu sticky avec sections : Accueil, Films, Favorites, Add Movie, Réalisateurs, KPI, Localisation.
+
+Activation dynamique des sections (affichage/masquage) via JavaScript.
+
+B. Films (API OMDb)
+
+Suggestions aléatoires de films (renouvelables avec un bouton).
+
+Filtres API : année min/max, note minimale.
+
+Affichage sous forme de cartes (poster, titre, année, réalisateur, note).
+
+C. Recherche
+
+Barre de recherche sur l’accueil.
+
+Affichage des résultats dans une section dédiée Search Results.
+
+D. Favoris
+
+Ajout/suppression de films en favoris.
+
+Sauvegarde dans le navigateur via localStorage.
+
+Filtrage des favoris par genre et note minimale.
+
+Compteur dynamique du nombre de favoris.
+
+E. Gestion de films locaux (CRUD)
+
+Dans la section Add / Manage Local Movies :
+
+Ajout d’un film local via formulaire.
+
+Édition / suppression de films locaux.
+
+Filtres locaux : genre, année min/max, note minimale.
+
+Possibilité de remplir la base locale à partir de l’API OMDb (“Refresh Local From API”).
+
+Persistance des données via localStorage.
+
+F. Réalisateurs (API + Local)
+
+Liste de réalisateurs “Featured Directors”.
+
+Possibilité d’ajouter des réalisateurs localement (CRUD) : nom, nombre de films, note moyenne, bio.
+
+Fusion d’une liste de réalisateurs API + Locaux.
+
+Persistance des réalisateurs locaux via localStorage.
+
+G. KPI / Tableau de bord
+
+Affichage de cartes KPI :
+
+Total de films (local + favoris + API)
+
+Source dominante (Local/Favorites/API)
+
+KPI “API info” (présent dans l’interface)
+
+Graphiques via Chart.js :
+
+Histogramme (répartition Local/Favorites/API)
+
+Donut (proportions)
+
+Tableau récapitulatif KPI (exemple de données).
+
+H. Localisation
+
+Intégration Google Maps (EMSI Les Orangers) via iframe.
+
+3) Technologies utilisées
+
+HTML5 (structure)
+
+CSS3 (design moderne : gradient, effets glow, animations, responsive)
+
+JavaScript (ES6) (logique applicative / SPA / modules)
+
+API OMDb (films, détails, recherche)
+
+Chart.js (graphiques KPI)
+
+localStorage (persistance des favoris, films locaux, réalisateurs locaux)
+
+Font Awesome + Google Fonts (icônes & typographie)
+
+4) Structure des fichiers (proposée)
+
+index.html : structure et sections de l’application
+
+niyas.css : styles + animations + responsive
+
+niyas.js : logique JS (classes, appels API, CRUD, KPI, navigation)
+
+5) Installation et exécution
+
+Mettre les fichiers dans un même dossier :
+
+index.html
+
+niyas.css
+
+niyas.js
+
+Ouvrir index.html dans un navigateur (Chrome/Edge/Firefox).
+
+Option recommandé : lancer avec Live Server (VS Code) pour un meilleur confort.
+
+6) Utilisation rapide
+
+Accueil : lancer une recherche avec le champ “Search movie…”
+
+Films : générer des suggestions + appliquer des filtres
+
+Favorites : consulter/filtrer les films favoris
+
+Add Movie : ajouter, modifier, supprimer et filtrer les films locaux
+
+Réalisateurs : consulter + ajouter/éditer/supprimer des réalisateurs locaux
+
+KPI : visualiser les statistiques et graphiques
+
+Localisation : voir l’emplacement EMSI Les Orangers
+
+7) Points forts du projet
+
+Interface moderne et animée (effets UI avancés)
+
+Vraie logique “app” : SPA + stockage local + filtres + dashboard KPI
+
+Intégration d’API externe (OMDb) + visualisation de données (Chart.js)
+
+Modules complets : recherche, favoris, CRUD local, réalisateurs, KPI
+
+8) Auteurs
+
+Nidal Jabal
+
+Mohamed Yassine Rouani
+
+Asmaa Charqui
+Classe : G10 — EMSI Les Orangers
